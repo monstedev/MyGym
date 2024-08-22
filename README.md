@@ -1,11 +1,11 @@
 # MyGym
 
 ## :exclamation: Introduzione
-> MyGym è un programma molto semplice creato per chi si allena a casa e vuole crearsi la propria scheda di allenamento personalizzata. <br />
-> Il programma non contiene un sistema di accesso e creazione di account, pertanto è necessario scaricarlo e avviarlo sul proprio dispositivo.
+MyGym è un programma molto semplice creato per chi si allena a casa e vuole crearsi la propria scheda di allenamento personalizzata. <br />
+ Il programma non contiene un sistema di accesso e creazione di account, pertanto è necessario scaricarlo e avviarlo sul proprio dispositivo.
 > Questa prima versione contiene solo le funzioni basiche per l'uso quotidiano, il programma verrà aggiornato in futuro con l'implementazione di nuove pagine e nuove funzioni.
 
-> Per avviarlo e usarlo è necessario seguire i passaggi sotto elencati
+Per avviarlo e usarlo è necessario seguire i passaggi sotto elencati
 
 ## :gear: Passaggi per avviare MyGym
 > Questa procedura da per scontato che phpmyadmin, Visual Studio Code e xampp siano installati.
