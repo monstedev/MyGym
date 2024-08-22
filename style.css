@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb85;
+    --color-white: #202528;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #edeffd;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #a3bdcc;
+    --color-background: #181a1e;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark)
+}
+
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+
+}
+
+a {
+    color: var(--color-dark);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+h5 {
+    font-size: 0.77rem;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+.profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted {
+    color: var(--color-info-dark)
+}
+
+p {
+    color: var(--color-dark-variant)
+}
+
+b {
+    color: var(--color-dark)
+}
+
+.text-primary {
+    color: var(--color-primary)
+}
+
+.text-danger {
+    color: var(--color-danger)
+}
+
+.text-success {
+    color: var(--color-success)
+}
+
+.text-warning {
+    color: var(--color-warning)
+}
+
+.btn {
+    background: var(--color-primary);
+    padding: 0.6rem 1rem;
+    border-radius: 0.4rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: left;
+    gap: 0.6rem;
+}
+
+.btn.danger {
+    background: var(--color-danger);
+}
+.btn.success {
+    background: var(--color-success);
+}
+.btn.warning {
+    background: var(--color-warning);
+}
+
+.btn.add {
+    position: absolute;
+    top: 1.4rem;
+    left: calc(14rem + 16rem);
+}
+
+p.notfound{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+/* =========================================================== ASIDE ============================================================= */
+
+aside {
+    height: 100vh;
+}
+
+aside .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+
+aside .logo {
+    display: grid;
+    place-items: center;
+    gap: 0.8rem;
+}
+
+aside .close {
+    display: none;
+}
+
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+
+aside h3 {
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a.active {
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+}
+
+aside .sidebar a.active:before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary)
+}
+
+aside .sidebar a.active span {
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover {
+    color: var(--color-primary)
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+}
+
+/* =========================================================== MAIN ============================================================= */
+
+main {
+    margin: 1.4rem 0;
+}
+
+main .schedules {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+}
+
+main .schedules.dashboard_schedules {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+}
+
+main .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+main .schedule {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main .schedule .informations {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem 0;
+}
+
+main .schedule .informations .info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.4rem;
+    width: 25rem;
+}
+
+main .schedule img {
+    width: 10rem;
+    border-radius: 0.4rem;
+}
+
+main .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    padding: 0.6rem;
+    background: var(--color-background);
+    color: var(--color-info-light);
+}
+
+.add-exercise h3{
+    margin-bottom: 1rem;
+}
+
+
+
+main .view{
+    margin-top: 2rem;
+}
+
+main .view h2{
+    margin-bottom: 0.8rem;
+}
+
+main .view table{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    margin-top: 1rem;
+}
+
+main table:hover{
+    box-shadow: none;
+}
+
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+    text-align: left;
+}
+
+main table tbody td:last-child td{
+    border: none;
+}
+
+main .view a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary)
+}
+
+.exercises table{
+    width: 50rem;
+}
+
+.exercises table td, th{
+    text-align: left;
+}
+
+.exercises table tbody input{
+    width: 10rem;
+}
+
+.exercises table tbody input#name{
+    width: auto;
+}
+
+.start{
+    width: calc(100vw - 14rem - 23rem);
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.start #timer{
+    font-size: 8rem;
+}
+
+#next{
+    display: flex;
+    gap: 1rem;
+}
+
+.timer_names{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+span#exercise-name{
+    font-size: 7rem;
+}
+
+.start .btn{
+    padding: 1rem 1.4rem;
+    font-size: 1.4rem;
+}
+
+.add-schedule{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.add-schedule .add-form{
+    background: var(--color-white);
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow);
+}
+
+.add-schedule form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.add-schedule form input{
+    background: var(--color-background);
+}
+
+.form-group{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: left;
+}
