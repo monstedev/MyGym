@@ -86,7 +86,7 @@ include './partials/header.php';
     let preparationTime = 10;
 
     function startPreparation() {
-        document.getElementById('exercise-name').innerText = "Preparati!";
+        document.getElementById('exercise-name').innerText = "Get Ready!";
         preparationTimer = startTimer(preparationTime, startExercise);
     }
 
